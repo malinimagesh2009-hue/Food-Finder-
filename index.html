@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FoodFinder | Discover food nearby</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-icon">🍽️</span> FoodFinder</a>
+    <span class="tagline">Find your cravings nearby</span>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">YOUR LOCAL FOOD GUIDE</p>
+      <h1>Find what you’re craving.</h1>
+      <p class="intro">Search for a food and discover nearby restaurants, distance and directions.</p>
+
+      <form id="searchForm" class="search-panel">
+        <label for="foodSearch">What would you like to eat?</label>
+        <div class="search-row">
+          <input id="foodSearch" type="search" placeholder="Try biryani, pizza, dosa..." required>
+          <button type="submit">Search food</button>
+        </div>
+        <div class="location-row">
+          <button type="button" id="locationBtn" class="location-btn">◎ Use my current location</button>
+          <span id="locationStatus" aria-live="polite">Location not selected</span>
+        </div>
+      </form>
+      <div class="quick-searches">
+        <span>Popular:</span>
+        <button type="button" data-food="Biryani">Biryani</button>
+        <button type="button" data-food="Pizza">Pizza</button>
+        <button type="button" data-food="Dosa">Dosa</button>
+        <button type="button" data-food="Burger">Burger</button>
+      </div>
+    </section>
+
+    <section class="results-section">
+      <div class="results-heading">
+        <div>
+          <p class="eyebrow">NEAR YOU</p>
+          <h2 id="resultsTitle">Nearby food places</h2>
+        </div>
+        <span id="resultCount" class="count">0 places</span>
+      </div>
+      <div id="message" class="message">
+        Choose a food and share your location to find nearby places.
+      </div>
+      <div id="results" class="results-grid"></div>
+      <p class="data-note">
+        Place names and locations are retrieved from OpenStreetMap. Menu items and prices
+        are not consistently available in map data, so verify prices with the restaurant.
+      </p>
+    </section>
+  </main>
+
+  <footer>FoodFinder · A student web development project</footer>
+  <script src="script.js"></script>
+</body>
+</html>

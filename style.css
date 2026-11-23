@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap');
+
+:root {
+  --ink: #20251f;
+  --muted: #72796f;
+  --green: #26734d;
+  --green-dark: #19583a;
+  --cream: #fbf8f1;
+  --line: #e9e8df;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--cream);
+  font-family: 'DM Sans', sans-serif;
+}
+.topbar {
+  height: 72px; padding: 0 max(6vw, 22px); display: flex;
+  align-items: center; justify-content: space-between; background: #fff;
+  border-bottom: 1px solid var(--line);
+}
+.brand { color: var(--ink); text-decoration: none; font: 700 23px 'Outfit', sans-serif; }
+.brand-icon { margin-right: 7px; }
+.tagline { color: var(--muted); font-size: 13px; }
+.container { width: min(1050px, 90%); margin: 0 auto; }
+.hero { padding: 65px 0 42px; }
+.eyebrow { color: var(--green); font-size: 11px; font-weight: 700; letter-spacing: 2px; }
+h1, h2 { font-family: 'Outfit', sans-serif; margin: 8px 0; }
+h1 { font-size: clamp(36px, 6vw, 58px); letter-spacing: -1.8px; }
+.intro { color: var(--muted); max-width: 550px; line-height: 1.7; }
+.search-panel {
+  background: white; border: 1px solid var(--line); border-radius: 18px;
+  padding: 22px; margin-top: 27px; box-shadow: 0 12px 35px #293d2610;
+}
+.search-panel label { display: block; font-weight: 700; margin-bottom: 10px; }
+.search-row { display: flex; gap: 10px; }
+input {
+  min-width: 0; flex: 1; padding: 15px 16px; border: 1px solid #dfe3dc;
+  border-radius: 10px; font: inherit; outline: none;
+}
+input:focus { border-color: var(--green); box-shadow: 0 0 0 3px #26734d18; }
+button { cursor: pointer; font: inherit; }
+.search-row button {
+  border: 0; border-radius: 10px; padding: 0 22px; color: white;
+  background: var(--green); font-weight: 700;
+}
+.search-row button:hover, .location-btn:hover { background: var(--green-dark); }
+.location-row { display: flex; align-items: center; gap: 13px; margin-top: 15px; flex-wrap: wrap; }
+.location-btn {
+  border: 0; border-radius: 8px; padding: 10px 13px; background: #eaf3ed;
+  color: var(--green-dark); font-weight: 700;
+}
+#locationStatus { color: var(--muted); font-size: 12px; }
+.quick-searches { display: flex; gap: 9px; align-items: center; flex-wrap: wrap; margin-top: 18px; }
+.quick-searches span { color: var(--muted); font-size: 13px; }
+.quick-searches button {
+  border: 1px solid var(--line); border-radius: 20px; padding: 7px 13px;
+  background: white; color: #41483f; font-size: 12px;
+}
+.results-section { padding: 20px 0 65px; }
+.results-heading { display: flex; justify-content: space-between; align-items: end; }
+h2 { font-size: 27px; }
+.count { color: var(--muted); font-size: 13px; padding-bottom: 9px; }
+.message {
+  padding: 22px; margin: 18px 0; border: 1px dashed #d8ddd5;
+  border-radius: 12px; color: var(--muted); background: #fff;
+}
+.results-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; }
+.place-card {
+  padding: 20px; background: white; border: 1px solid var(--line);
+  border-radius: 15px; box-shadow: 0 5px 18px #293d2608;
+}
+.place-top { display: flex; gap: 12px; align-items: flex-start; }
+.food-icon {
+  width: 45px; height: 45px; display: grid; place-items: center;
+  background: #f1f5ed; border-radius: 12px; font-size: 23px; flex-shrink: 0;
+}
+.place-card h3 { margin: 1px 0 5px; font: 700 18px 'Outfit', sans-serif; }
+.kind { color: var(--green); font-size: 12px; text-transform: capitalize; }
+.detail { color: var(--muted); font-size: 13px; line-height: 1.55; margin: 13px 0; }
+.meta { display: flex; justify-content: space-between; gap: 8px; font-size: 12px; }
+.price { font-weight: 700; color: #9a6221; }
+.map-link {
+  display: inline-block; margin-top: 15px; padding: 9px 13px; border-radius: 8px;
+  background: #eaf3ed; color: var(--green-dark); text-decoration: none;
+  font-size: 12px; font-weight: 700;
+}
+.map-link:hover { background: #dcece1; }
+.data-note { color: var(--muted); font-size: 11px; line-height: 1.6; margin-top: 22px; }
+footer { padding: 22px; text-align: center; background: white; color: var(--muted); font-size: 12px; }
+@media (max-width: 560px) {
+  .tagline { display: none; }
+  .hero { padding-top: 42px; }
+  .search-row { flex-direction: column; }
+  .search-row button { padding: 14px; }
+  .results-heading { align-items: start; }
+}
